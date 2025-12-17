@@ -1,0 +1,76 @@
+# ===============================
+# Python
+# ===============================
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+automation/
+
+# ===============================
+# Pytest
+# ===============================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ===============================
+# Playwright
+# ===============================
+# Playwright browsers (if installed locally)
+.ms-playwright/
+
+# Playwright traces, videos, screenshots
+test-results/
+playwright-report/
+trace.zip
+*.webm
+*.png
+
+# ===============================
+# Reports (generated)
+# ===============================
+reports/
+allure-results/
+allure-report/
+
+# ===============================
+# Environment variables
+# ===============================
+.env
+.env.*
+!.env.example
+
+# ===============================
+# IDEs & Editors
+# ===============================
+.vscode/
+.idea/
+*.iml
+
+# ===============================
+# OS
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Logs
+# ===============================
+*.log
+
+# ===============================
+# Temporary files
+# ===============================
+*.tmp
+*.temp

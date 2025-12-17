@@ -1,0 +1,6 @@
+pytest
+pytest-playwright
+playwright
+requests
+pytest-html
+python-dotenv

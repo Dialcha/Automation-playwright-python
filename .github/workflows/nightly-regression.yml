@@ -1,0 +1,32 @@
+name: Nightly Regression
+
+on:
+  schedule:
+    - cron: "0 2 * * *"   # 2:00 AM UTC
+  workflow_dispatch:
+
+jobs:
+  nightly:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          playwright install --with-deps
+
+      - name: Run Full Regression
+        run: |
+          pytest -m regression --html=reports/nightly-report.html --self-contained-html
+
+      - name: Upload Nightly Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: nightly-regression-report
+          path: reports/nightly-report.html
